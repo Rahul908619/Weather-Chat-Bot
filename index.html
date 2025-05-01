@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Weather Forecast Assistant</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/000000/partly-cloudy-day.png">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="app-logo">
+        <img src="https://img.icons8.com/fluency/48/000000/partly-cloudy-day.png" alt="Weather App Logo">
+        <h1>WeatherAI Assistant</h1>
+      </div>
+    </header>
+
+    <div class="search-container">
+      <h2 class="search-title">Find weather for your location</h2>
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name (e.g., London, Tokyo, New York)">
+        <button id="voiceButton" title="Search by voice"><i class="fas fa-microphone"></i></button>
+        <button onclick="getWeather()" id="searchButton"><i class="fas fa-search"></i> Get Weather</button>
+      </div>
+    </div>
+
+    <div class="weather-grid">
+      <div class="weather-info" id="weatherResult">
+        <h2>Current Weather</h2>
+        <p>Enter a city to see current weather conditions</p>
+      </div>
+      
+      <div class="ai-summary" id="aiSummary">
+        <h2>AI Weather Report</h2>
+        <p>Our AI will generate a personalized weather report once you search for a location</p>
+      </div>
+    </div>
+
+    <div class="forecast-container">
+      <h2>5-Day Forecast</h2>
+      <div class="forecast-grid" id="forecastResult">
+        <p>Enter a city to see the 5-day forecast</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="scripts/weather.js"></script>
+  <script src="scripts/gemini.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
